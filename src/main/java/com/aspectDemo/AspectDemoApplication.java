@@ -9,18 +9,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.aspectDemo.business.BusinessLogic;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner{
+public class AspectDemoApplication implements CommandLineRunner{
 
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	private final BusinessLogic businessLogic;
 
 	// using spring constructor injection
-	public Application(BusinessLogic businessLogic) {
+	public AspectDemoApplication(BusinessLogic businessLogic) {
 		this.businessLogic = businessLogic;
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(AspectDemoApplication.class, args);
 	}
 
 	@Override
